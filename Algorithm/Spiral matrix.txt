@@ -49,8 +49,8 @@ namespace Spiral_Matrix
                             result = result + array[i, cl] + ",";
                         cl++;
                     }
-                    symbol = (symbol + 1) % 4;
-                }
+                    symbol = (symbol + 1) % 4; //key step to change direction to run next!
+                }
             }
             result = result.Remove(result.LastIndexOf(","), 1);
             Console.WriteLine("the return result is {0} {1} {2}", '[', result, ']');
