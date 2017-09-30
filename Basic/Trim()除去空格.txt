@@ -1,0 +1,6 @@
+Trim()是String类的内置方法，用于去除字符串前后的空格搜索，例子如下
+String previousString="  I am a string!   ";
+String currentString=previousString.Trim();
+Console.WriteLine(currentString);
+
+输出结果是：I am a string!

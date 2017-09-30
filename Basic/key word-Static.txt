@@ -1,0 +1,140 @@
+静态函数/静态方法/静态类
+简而言之： 变量前 static 的对象值是浮动的，为最后一次变量赋值的值！ 
+
+“共享”
+static意思是静态，可以修饰类、字段、属性、方法
+标记为static的就不用创建实例对象调用了，可以通过类名直接点出来
+static三种用法：
+
+1.用于变量前，表示每次重新使用该变量所在方法、类或自定义类时，变量的值为程序这次运行最后一次为变量赋值时的值，这个方法称为静态函数：
+
+namespace Static
+{
+    class A
+    {
+        int Mem1;
+        static int Mem2;
+
+        public void SetVars(int v1, int v2)
+        {
+            Mem1 = v1; Mem2 = v2;
+        }
+        public void Display(string str)
+        { Console.WriteLine("{0}: Mem1 = {1}, Mem2 = {2}", str, Mem1, Mem2); }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A a1 = new A(), a2 = new A();
+            a1.SetVars(2, 4);
+            a1.Display("a1");
+
+            a2.SetVars(15, 17);
+            a2.Display("a2");
+            a1.Display("a1");
+
+            a1.Display("a1");
+            Console.ReadKey();        
+        }
+    }
+}
+Result;
+d1: Mem1= 2, Mem2=4
+d2: Mem1= 15, Mem2=17
+d1: Mem1= 2, Mem2=17
+
+2.在方法（函数）前用static修饰，表示此方法为所在类或所在自定义类所有，而不是这个类的实例所有，这个方法称为静态方法：
+
+情况一：非静态方法：
+
+class t
+
+{
+
+t(....（参数，下面同）)
+
+{
+
+~~~~（方法内容，下面同）
+
+}
+
+void s(....)
+
+{
+
+~~~~
+
+}
+
+}
+
+当你在其他方法里调用这个类中的方法s，则需先声明这个类的变量如：t sd = new t(....);
+
+再在t里调用方法：sd.s(....);
+
+情况2：静态方法：
+
+class t
+
+{
+
+t(....（参数，下面同）)
+
+{
+
+~~~~（方法内容，下面同）
+
+}
+
+static void s(....)
+
+{
+
+~~~~
+
+}
+
+}
+
+当你在其他方法里调用这个类中的方法s，则不用先声明这个类的变量如直接调用方法：t.s(....);
+
+
+3.用于class前，说明此类型无法新建实例，简单点说这个类型的方法全是静态方法，这个类里的非静态方法是不能使用的，这个类型称为静态类.
+
+比如C#控制台操作的Cancle类里面的成员就被标记为静态的，可以直接用Concle.直接点出来使用。
+
+如果没有标记为静态就要通过创建实例对象来调用，比如说动态字符串StringBuilder就要new一个实例来调用
+
+StringBuilder sb =new StringBuilder();
+
+sb.xxx(); //xxx是方法名
+
+static class t
+
+{
+
+~~~~
+
+}
+
+~~~~
+
+class d
+
+{
+
+~~~~
+
+void f(....)
+
+{
+
+~~~~
+
+t v = new t();//此时程序会出现错误
+
+}
+
+}

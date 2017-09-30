@@ -1,0 +1,30 @@
+http://stackoverflow.com/questions/11743160/how-do-i-encode-and-decode-a-base64-string
+http://www.codeguru.com/columns/dotnet/base64-encoding-from-c.html
+
+加密：
+        static void Main(string[] args)
+        {
+            string plainText = "Ypj40203868";
+
+            var plainTextBytes = Encoding.UTF8.GetBytes(plainText);
+
+            string encodedText = Convert.ToBase64String(plainTextBytes);
+
+            Console.WriteLine("Plain Text : {0}", plainText);
+            Console.WriteLine("Encoded Text : {0}", encodedText);
+            Console.ReadKey();
+        }
+
+解密： 
+ static void Main(string[] args)
+        {
+            string encodedText = "WXBqNDAyMDM4Njg=";
+
+            var encodedTextBytes = Convert.FromBase64String(encodedText);
+
+            string plainText = Encoding.UTF8.GetString(encodedTextBytes);
+
+            Console.WriteLine("Encoded Text : {0}", encodedText);
+            Console.WriteLine("Plain Text : {0}", plainText);
+            Console.ReadKey();
+        }

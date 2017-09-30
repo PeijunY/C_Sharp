@@ -1,0 +1,14 @@
+转义序列	含义
+\\	\ 字符
+\'	' 字符
+\"	" 字符
+\?	? 字符
+\a	Alert 或 bell
+\b	退格键（Backspace）
+\f	换页符（Form feed）
+\n	换行符（Newline）
+\r	回车
+\t	水平制表符 tab
+\v	垂直制表符 tab
+\ooo	一到三位的八进制数
+\xhh . . .	一个或多个数字的十六进制数

@@ -1,0 +1,68 @@
+out 用于在方法中返回多余值。（可以理解为让一个方法返回不同的类型值）
+一： 
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            Console.WriteLine("请输入用户名");
+            string uersname = Console.ReadLine();
+            Console.WriteLine("请输入密码");
+            string password = Console.ReadLine();
+            //传入参数也一样要在参数前面添加一个out
+            bool b = login(uersname, password, out str);
+            if (b)
+            {
+                Console.WriteLine(str);
+            }
+            else
+            {
+                Console.WriteLine(str);
+            }
+            Console.ReadKey();
+        }
+        public static bool login(string name, string pwd, out string msg)
+        {
+            //如果需要返回多个参数，则添加多个参数即可，例如login(string name, string pwd, out string msg,out int num)
+            //out多余返回值，用于一个方法中多余返回的值，例如这个方法中，
+            //返回值是布尔类型，同时，还可以返回一个多余的值，msg
+            //out的参数必须在方法中进行初始化
+            bool result;
+            if (name == "admin" && pwd == "123")
+            {
+                msg = "登陆成功";
+                result = true;
+
+            }
+            else
+            {
+                msg = "登陆失败";
+                result = false;
+            }
+
+            return result;
+        }
+    }
+
+二：
+    class OutReturnExample
+    {
+        static void Method(out int i, out string s1, out string s2)
+        {
+            i = 44;
+            s1 = "I've been returned";
+            s2 = null;
+        }
+
+        static void Main()
+        {
+            int value;
+            string str1, str2;
+            Method(out value, out str1, out str2);
+            Console.WriteLine("{0} is {1}",str1, value);
+            Console.ReadKey();
+            // value is now 44
+            // str1 is now "I've been returned"
+            // str2 is (still) null;
+        }
+    }

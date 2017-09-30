@@ -1,0 +1,14 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+            string value = "1640";
+            int number=0;
+            if (int.TryParse(value, out number))
+                Console.WriteLine($"Converted '{value}' to {number}");
+            else
+                Console.WriteLine($"Unable to convert '{value}'");
+            Console.WriteLine(number);
+            Console.ReadKey();
+        }
+    }

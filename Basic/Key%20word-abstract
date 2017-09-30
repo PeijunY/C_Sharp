@@ -1,0 +1,59 @@
+一、Virtual方法（虚方法）
+
+     virtual 关键字用于在基类中修饰方法。virtual的使用会有两种情况：
+
+     情况1：在基类中定义了virtual方法，但在派生类中没有重写该虚方法。那么在对派生类实例的调用中，该虚方法使用的是基类定义的方法。
+
+     情况2：在基类中定义了virtual方法，然后在派生类中使用override重写该方法。那么在对派生类实例的调用中，该虚方法使用的是派生重写的方法。
+
+Virtua：当一个方法被声明为Virtual时，它是一个虚拟方法，直到你使用ClassName variable = new ClassName();声明一个类的实例之前，它都不存在于真实的内存空间中。这个关键字在类的继承中非常常用，用来提供类方法的多态性支持。
+
+二、Abstract方法（抽象方法）
+
+     abstract关键字只能用在抽象类中修饰方法，并且没有具体的实现。抽象方法的实现必须在派生类中使用override关键字来实现。
+     abstract:声明抽象类、抽象方法
+     1.抽象方法所在类必须为抽象类
+     2.抽象类不能直接实例化，必须由其派生类实现。
+     3.抽象方法不包含方法主体，必须由派生类以override方式实现此方法,这点跟interface中的方法类似
+virtual，abstract是告诉其它想继承于他的类 你可以重写我的这个方法或属性，否则不允许。
+一个生动的例子 :老爸表示基类（被继承的类） 儿子表示子类（继承的类）
+老爸用virtual告诉儿子:"孩子,你要继承我的事业,在这块上面可以自己继续发展你自己的"
+儿子用override告诉全世界:"这个我可不是直接拿我爸的,他只是指个路给我,是我自己奋斗出来的"
+
+三、interface:用来声明接口
+
+Example:
+namespace Abstract
+{
+    class Parent
+    {
+        public virtual Parent foo()   //virtual method.
+        {
+            Console.WriteLine("Parent.foo()");
+            return this;
+        }
+    }
+    class child : Parent
+    {
+        /// <summary>
+        ///overrid作用是在派生类child中重写了基类（parent）foo，
+        ///这样在对派生类的调用中，虚方法Parent foo使用的依旧是派生重写的方法。
+        ///简单而言：使用了override重载，基类的方法就没用了
+        /// </summary>
+        /// <returns></returns>
+        public override Parent foo()  
+        {
+            Console.WriteLine("Child.foo()");
+            return this;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            child c = new child();
+            c.foo();
+            ((Parent)c).foo();
+        }
+    }
+}

@@ -1,0 +1,57 @@
+用于声明变量来存储布尔值 true 和 false, 可将布尔值赋给 bool 变量。 也可以将计算结果为 bool 类型的表达式赋给 bool 变量。
+
+一：
+class Program
+    {
+        static void Main(string[] args)
+        {
+            bool b = false;
+            int days = DateTime.Now.DayOfYear;
+            //DayOfYear为Int类型, DayOfWeek为枚举类型.
+            //可以转化为int类型，Int i=Convert.ToInt32(dt.DayOfWeek)
+
+            // Assign the result of a boolean expression to b
+            b = (days % 2 ==0);
+
+            // Branch depending on whether b is true or false.
+            if (b)
+            {
+
+                Console.WriteLine($" This year has passed {days} days, so the number of days is an even number");
+            }
+            else
+            {
+                Console.WriteLine($" This year has passed {days} days, so the number of days is an odd number");
+            }
+            Console.ReadKey();
+        }
+    }
+
+二：
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.Write("Enter a character: ");
+                char c = (char)Console.Read();
+                if (Char.IsLetter(c))
+                {
+                    if (Char.IsLower(c))
+                    {
+                        Console.WriteLine($"The character {c} is lowercase.");
+                    }
+                    else
+                    {
+                        Console.WriteLine$"The character {c} is uppercase.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Not an alphabetic character.");
+                }
+                Console.ReadLine();
+            }
+        }
+    }

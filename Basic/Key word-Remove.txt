@@ -1,0 +1,15 @@
+class Program{
+		static void Main(string[] args)
+		{
+			//声明一个Str1字符串并赋值。 
+			string str1 = "删除字符"; 
+			//声明一个Str2字符串，并使用Remove方法从字符串str1的索引从2开始删除。
+			string str2 = str1.Remove(2); 
+			//声明一个Str3字符串，并使用Remove方法从字符串str1的索引从0开始删除2个字符。 
+			string str3 = str1.Remove(0, 2);
+			Console.WriteLine(str2); 
+			Console.WriteLine(str3);
+			Console.ReadLine(); 
+		}
+
+}
