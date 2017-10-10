@@ -17,9 +17,9 @@ namespace Word_Ladder
     {
         static void Main(string[] args)
         {
-            string beginWord = "hit" ;
-            string endWord = "cog" ;
-            List<string> wordList = new List<string> {"hot", "dot", "dog", "lot", "log", "cog" };
+            string beginWord = "hit";
+            string endWord = "cog";
+            List<string> wordList = new List<string> { "hot", "dot", "dog", "lot", "log", "cog" };
             Method wordladder = new Method();
             Console.WriteLine("the Result is {0}", wordladder.ladderMethod(beginWord, endWord, wordList));
             Console.ReadKey();
@@ -27,23 +27,27 @@ namespace Word_Ladder
     }
     class Method
     {
-        public List<string> ladderMethod(String start, String end, List<string> dict)
+        public string ladderMethod(String start, String end, List<string> dict)
         {
-            List<string> ResultList = new List<string> { start };
+            //List<string> ResultList = new List<string> { start };
+            string ResultList = "";
             foreach (char Le in start)
-            {                
-                string newWord=start;
-                for (char ch = 'a'; ch <= 'z'; ch++)
+            {
+                string Word = start;
+                for (var ch = 'a'; ch < 'z'; ch++)
                 {
-                    newWord = newWord.Replace(Le, ch);
-                    for (var i=0; i<dict.Count(); i++)
+                    string newWord = Word.Replace(Le, ch);
+                    Console.WriteLine("{0},{1},{2}",Le,ch,newWord);
+                    for (var i = 0; i < dict.Count(); i++)
                     {
-                        if (dict[i].Equals(newWord)&& !ResultList.Contains(newWord))
+                        if (dict.Contains(newWord)&&!ResultList.Contains(newWord))
                         {
-                            ResultList.Add(dict[i]);
-                            dict.Remove(dict[i]);
-                            break;
+                            ResultList+= dict[i];
+                            //dict.Remove(dict[i]);
+                            Word=newWord;
+                            Console.Write("{0},{1}", dict[i], ResultList);
                         }
+                        
                     }
                 }
             }
