@@ -1,0 +1,53 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Word_Ladder
+{
+    //beginWord = "hit"
+    //endWordWord = "cog"
+    //wordList<string> = ["hot","dot","dog","lot","log","cog"]
+    //  Return
+    //[ ["hit","hot","dot","dog","cog"], ["hit","hot","lot","log","cog"] ]
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string beginWord = "hit" ;
+            string endWord = "cog" ;
+            List<string> wordList = new List<string> {"hot", "dot", "dog", "lot", "log", "cog" };
+            Method wordladder = new Method();
+            Console.WriteLine("the Result is {0}", wordladder.ladderMethod(beginWord, endWord, wordList));
+            Console.ReadKey();
+        }
+    }
+    class Method
+    {
+        public List<string> ladderMethod(String start, String end, List<string> dict)
+        {
+            List<string> ResultList = new List<string> { start };
+            foreach (char Le in start)
+            {                
+                string newWord=start;
+                for (char ch = 'a'; ch <= 'z'; ch++)
+                {
+                    newWord = newWord.Replace(Le, ch);
+                    for (var i=0; i<dict.Count(); i++)
+                    {
+                        if (dict[i].Equals(newWord)&& !ResultList.Contains(newWord))
+                        {
+                            ResultList.Add(dict[i]);
+                            dict.Remove(dict[i]);
+                            break;
+                        }
+                    }
+                }
+            }
+            return ResultList;
+        }
+    }
+}
