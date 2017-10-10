@@ -30,7 +30,6 @@ class Program
             int max_area = 0;
             for (int i = 0; i < Row; i++)
             {
-                string output = "";
                 for (int j = 0; j < Col; j++)
                 {
                     if (array[i, j] == 1 )
@@ -44,15 +43,13 @@ class Program
                                 {
                                     curr_area = (l - j + 1) * (k - i + 1);
                                     max_area = Math.Max(max_area, curr_area);
-                                    output = output + array[k, l];
-                                }
+                                }
                                 else
                                     lastj = l;
                             }
                         }
                     }
                 }
-                Console.WriteLine(output);
             }
             return max_area;         
         }
