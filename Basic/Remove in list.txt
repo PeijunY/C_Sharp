@@ -1,0 +1,30 @@
+C# .Net List<T>中Remove()、RemoveAt()、RemoveRange()、RemoveAll()的区别，List<T>删除汇总 
+
+在List<T>中删除主要有Remove()、RemoveAt()、RemoveRange()、RemoveAll()这几个方法。下面一一介绍使用方法和注意点。
+
+我们以List<string>举例
+
+var strList = new List<string> { "aa", "ba", "cc", "dd", "ee", "ff" };
+
+一、Remove()删除List中匹配到的第一个项，参数为List<T>中的T，返回类型为bool，成功删除返回True，失败或者没有找到返回False。例如：
+
+var rt =  strList.Remove("aa");
+
+二、RemoveAt()删除指定索引的一项。参数为int ，表示索引。返回类型为void。例如：
+
+strList.RemoveAt(0);
+
+三、RemoveRange()删除指定索引段的项，第一个参数为删除的起始索引，第二个参数为删除的个数。范围类型为void。例如：
+
+strList.RemoveRange(0, 2);
+
+四、RemoveAll()删除所有匹配到的项，参数是一个Predicate<T> 委托，用于定义要删除的元素应满足的条件。返回类型为int型，表示删除的个数。例如：
+
+//拉姆达表达式
+var rt = strList.RemoveAll(j=>j.Contains("a"));
+//自定义条件
+private static bool IsDel(string str)
+{
+    return str.Contains("a");
+}
+var rt = strList.RemoveAll(IsDel);
