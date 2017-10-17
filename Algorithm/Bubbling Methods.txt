@@ -52,7 +52,7 @@ class Program
                     }
                 }
             }
-            foreach (int c in Array) //Êä³öÅÅĞòºóµÄÊı×éÔªËØ£¡
+            foreach (int c in Array) //è¾“å‡ºæ’åºåçš„æ•°ç»„å…ƒç´ ï¼
             {
                 Console.Write(c + "\t");
             }
@@ -71,7 +71,7 @@ class Program
         }
         static void BubbleMethod(int[] Array)
         {
-            //IEnumerable<int> num = from a in Array orderby a descending select a; //LinqµÄ²éÑ¯±í´ïÊ½Óï·¨µÄÊµÏÖ
+            //IEnumerable<int> num = from a in Array orderby a descending select a; //Linqçš„æŸ¥è¯¢è¡¨è¾¾å¼è¯­æ³•çš„å®ç°
             var num = from item in Array orderby item ascending select item;    // the same as above expression                
             foreach (int s in num)
             {
@@ -81,4 +81,18 @@ class Program
     }
 
 4.
-
+        static void Main(string[] args)
+        {
+            int[] nums = new int[] { 100, 99, 45, 56, 29, 28, 26, 27, 25, 22, 24 };
+            Console.WriteLine("The method of bubbling: ");
+            BubblingOne(nums);
+            Console.ReadKey();
+         }
+        static void BubblingOne(int[] Array)
+        {
+            IEnumerable<int> num = Array.OrderByDescending(a => a);
+            foreach (int item in num)
+            {
+                Console.Write(item + " ");
+            }
+        }
