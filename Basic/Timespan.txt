@@ -1,0 +1,372 @@
+TimeSpan用法
+
+相关属性和函数：
+Add：与另一个TimeSpan值相加。 
+Days:返回用天数计算的TimeSpan值。 
+Duration:获取TimeSpan的绝对值。 
+Hours:返回用小时计算的TimeSpan值 
+Milliseconds:返回用毫秒计算的TimeSpan值。
+Minutes:返回用分钟计算的TimeSpan值。 
+Negate:返回当前实例的相反数。 
+Seconds:返回用秒计算的TimeSpan值。 
+Subtract:从中减去另一个TimeSpan值。 
+Ticks:返回TimeSpan值的tick数。是一个计时周期,表示一百纳秒,即一千万分之一秒，
+那么 Ticks 在这里表示总共相差多少个时间周期 
+TotalDays:返回TimeSpan值表示的天数
+TotalHours:返回TimeSpan值表示的小时数。
+TotalMilliseconds:返回TimeSpan值表示的毫秒数。 
+TotalMinutes:返回TimeSpan值表示的分钟数。 
+TotalSeconds:返回TimeSpan值表示的秒数。
+
+string time1 = "2010-5-26 8:10:00";
+string time2 = "2010-5-26 18:20:00";
+DateTime t1 = Convert.ToDateTime(time1);
+DateTime t2 = Convert.ToDateTime(time2);
+
+TimeSpan ts1=t2-t1;
+string tsMin=ts1.Minutes.ToString();
+
+ 
+TimeSpan ts11=new TimeSpan(t1.Tick);
+TimeSpan ts22=new TimeSpan(t2.Tick);
+
+string diff=ts22.Subtract(ts11).TotalMinutes.ToString();
+得到一个 TimeSpan 实例，TimeSpan 有一些属性：Days、TotalDays、Hours、TotalHours、Minutes、TotalMinutes、Seconds、TotalSeconds、Ticks，注意没有 TotalTicks。
+这些属性名称开始理解有些困难，但阅读本文后，相应您一定茅塞顿开。
+
+举例说明
+
+时间 1 是 2010-1-2 8:43:35；
+时间 2 是 2010-1-12 8:43:34。
+用时间 2 减时间 1，得到一个 TimeSpan 实例。
+
+那么时间 2 比时间 1 多 9 天 23 小时 59 分 59 秒。
+
+那么，Days 就是 9，Hours 就是 23，Minutes 就是 59，Seconds 就是 59。
+
+所以以后想知道两个时间段的差就容易的多了
+
+
+ 
+
+
+ 
+. 
+脚本之家
+
+
+软件下载
+
+
+
+
+
+
+
+
+
+
+
+
+
+源码下载
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+在线工具
+
+
+
+
+
+
+
+
+
+
+
+
+
+网页教程基础
+
+
+服务器常用软件
+
+
+手机版
+
+
+
+
+微信编辑器
+
+
+关注微信
+
+
+
+
+
+投稿中心hot
+. 
+. 
+. 
+脚本之家
+
+ 
+
+ 
+. 
+. 
+网页制作
+
+
+网络编程
+
+
+脚本专栏
+
+
+脚本下载
+
+
+数据库
+
+
+CMS教程
+
+
+电子书籍
+
+
+平面设计
+
+
+媒体动画
+
+
+操作系统
+
+
+网站运营
+
+
+网络安全
+
+
+在线手册
+
+. 
+. C#教程
+ vb
+ vb.net
+ C 语言
+ Java编程
+ Delphi
+ java
+ Android
+ IOS
+ Swift
+ Scala
+ 易语言
+ 其它相关
+ .
+. 
+
+您的位置：首页 → 软件编程 → C#教程 → 正文内容 timespan使用方法
+
+
+
+    
+.. 
+. 
+.
+cdnoss
+
+
+mtyun
+
+
+低价出售流量10000IP只需8元
+30余款阿里云产品免费6个月>>
+1G香港云49元/美国云49元/韩国云89元
+百兆 12核24线程 16G内存 2T 999/月
+百万动态HTTP代理IP,高匿永久去重
+◆◆◆◆◆高防免备案CDN◆◆◆◆◆
+★美国/香港/国内/高防服务器VPS★好优云
+█████480G单机高防打死退款█████
+【3000个备案老域名】100元起 每天更新
+【亿恩】DELL品牌服务器，月付799元起
+服务器常用软件集合
+九九数据 — 工信部认可正规资质IDC接入商
+彩16彩票下载APP送16元
+彩16彩票下载APP送16元
+众生网络 基于云计算的互联网基础服务运营商
+◆◆◆海西数据全球服务器租用◆◆◆
+大米云主机618大促，不仅仅是4折
+500家知名商城加盟，最高购物返利63%
+**香港高防10m大带宽独服，低至999元**
+脚本之家优惠券 购物更合适
+4核独服199/16核独服360|创梦网络
+浦东数据中心上海电信4星云主机30元/月起
+中原地区核心数据中心，首月托管免费
+██云彩网络██100G防服务器450元
+枫信科技-江苏双线10M保证-399/元
+港湾网络-徐州百独16核32G 999/月~
+免备vps20/百独799/双线350/45互联
+韩国香港美国站群服务器 巨牛网络
+鼎点网络百兆独享服务器仅需999元
+[香港双高防]无视CC★DDOS/堪比广东！
+畅游网络 百独服务器 包跑满 998元
+服务器租用 199元起
+█▇▆5M独享云主机599/年▆▇█
+群英云服务器送10M带宽30G防御,49元起
+服务器租用/托管-域名空间/认准腾佑科技
+███CN2香港服务器低至900元/月███
+
+..
+
+
+
+
+
+
+
+
+yipinweike
+
+.. 
+
+. 
+
+
+
+timespan使用方法详解
+
+作者： 字体：[增加 减小] 类型：转载 时间：2014-04-09 我要评论
+
+
+TimeSpan是用来表示一个时间段的实例，两个时间的差可以构成一个TimeSpan实例，现在就来介绍一下使用方法
+
+.
+.
+
+几点重要的用法：
+
+a 先来介绍几个方法
+
+TimeSpan.Minutes(其他时间比如天数，小时数，秒数都一样的情况下得到的分钟数的差),其他的Hours，Second一样
+DateTime.Tick :是一个计时周期，表示一百纳秒，即一千万分之一秒，那么 Ticks 在这里表示总共相差多少个时间周期，即：9 * 24 *                    3600 * 10000000 + 23 * 3600 * 10000000 + 59 * 60 * 10000000 + 59 * 10000000 = 8639990000000。3600 是一小时                    的秒数
+TimeSpan.TotalDays:两个时间段相差的日数，其他的TotalHours,TotalMinutes,TotalSeconds 一样
+
+b 两个时间的差
+
+
+
+复制代码 代码如下:
+
+
+string time1 = "2010-5-26 8:10:00";
+string time2 = "2010-5-26 18:20:00";
+DateTime t1 = Convert.ToDateTime(time1);
+DateTime t2 = Convert.ToDateTime(time2);
+
+TimeSpan ts1=t2-t1;
+string tsMin=ts1.Minutes.ToString();
+
+ 
+TimeSpan ts11=new TimeSpan(t1.Tick);
+TimeSpan ts22=new TimeSpan(t2.Tick);
+
+string diff=ts22.Subtract(ts11).TotalMinutes.ToString();
+
+
+Subtract:表示两个时间段的差
+diff:就表示两个时间相差的分钟数，上面的例子就是610分钟。
+
+ 得到一个 TimeSpan 实例，TimeSpan 有一些属性：Days、TotalDays、Hours、TotalHours、Minutes、TotalMinutes、Seconds、TotalSeconds、Ticks，注意没有 TotalTicks。
+这些属性名称开始理解有些困难，但阅读本文后，相应您一定茅塞顿开。
+
+举例说明
+
+时间 1 是 2010-1-2 8:43:35；
+时间 2 是 2010-1-12 8:43:34。
+用时间 2 减时间 1，得到一个 TimeSpan 实例。
+
+那么时间 2 比时间 1 多 9 天 23 小时 59 分 59 秒。
+
+那么，Days 就是 9，Hours 就是 23，Minutes 就是 59，Seconds 就是 59。
+
+所以以后想知道两个时间段的差就容易的多了
+
+TimeSpan Format Helper
+
+using System;
+using System.Collections.Generic;
+
+class TimeSpanUtility
+{
+    public static string FormatString(TimeSpan aTimeSpan)
+    {
+        string newFormat = aTimeSpan.ToString("d'd 'h'h 'm'm 's's'");
+        // 1d 3h 43m 23s
+
+        return newFormat;
+    }
+
+    public static string TimeSpanInWords(TimeSpan aTimeSpan)
+    {
+        List<string> timeStrings = new List<string>();
+
+        int[] timeParts = new[] { aTimeSpan.Days, aTimeSpan.Hours, aTimeSpan.Minutes, aTimeSpan.Seconds };
+        string[] timeUnits = new[] { "day", "hour", "minute", "second" };
+
+        for (int i = 0; i < timeParts.Length; i++)
+        {
+            if (timeParts[i] > 0)
+            {
+                timeStrings.Add(string.Format("{0} {1}", timeParts[i], Pluralize(timeParts[i], timeUnits[i])));
+            }
+        }
+
+        return timeStrings.Count != 0 ? string.Join(", ", timeStrings.ToArray()) : "0 seconds";
+    }
+
+    private static string Pluralize(int n, string unit)
+    {
+        if (string.IsNullOrEmpty(unit)) return string.Empty;
+
+        n = Math.Abs(n); // -1 should be singular, too
+
+        return unit + (n == 1 ? string.Empty : "s");
+    }
+}
+
+public class Client
+{
+    static void Main()
+    {
+        // 12 days, 23 hours, 24 minutes, 2 seconds.
+        TimeSpan span = new TimeSpan(12, 23, 24, 2);
+
+        Console.WriteLine(TimeSpanUtility.TimeSpanInWords(span));   // Output: 12 days, 23 hours, 24 minutes, 2 seconds
+        Console.WriteLine(TimeSpanUtility.FormatString(span));  // Output: 12d 23h 24m 2s
+    }
+}
+ 
