@@ -6,40 +6,44 @@ Content:
 ========================================
 Algorithm
 ---------------------
-#### * Three Sum.cs 
-#### * AddSpace.cs 
-#### * Bubbling Methods.cs 
-### * Get the count of 1 in a binary numb
-### * Insert Interval.cs 
-### * Maximal Rectangle.cs 
-### * Order the array number.cs 
-### * Random_no-Repeat.cs 
-### * Reverse_an_integer.cs 
-### * Sent mail.cs 
-### * Spiral Matrix.cs 
-### * Stack-to find the min value.
+##### * Three Sum.cs 
+##### * AddSpace.cs 
+##### * Bubbling Methods.cs 
+##### * Get the count of 1 in a binary numb
+##### * Insert Interval.cs 
+##### * Maximal Rectangle.cs 
+##### * Order the array number.cs 
+##### * Random_no-Repeat.cs 
+##### * Reverse_an_integer.cs 
+##### * Sent mail.cs 
+##### * Spiral Matrix.cs 
+##### * Stack-to find the min value.
 >> Could not finish it.
-### * StringToInt.cs 
-### * WordLadder.cs 
-### * sum-switch.cs 
-### * WordLadder.cs 
-### * Upload data from local.cs 
-### * 合数.cs 
+##### * StringToInt.cs 
+##### * WordLadder.cs 
+##### * sum-switch.cs 
+##### * WordLadder.cs 
+##### * Upload data from local.cs 
+##### * 合数.cs 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Basic
+---------------------
+##### * Binary system.txt 
+##### * Character constants.txt 
+##### * Decimal and Binary.txt 
+##### * Encode and Decode.txt 
+##### * Key word-Remove.txt 
+##### * Key word-out.txt 
+##### * Key%20word-abstract 
+##### * LINQ points.txt 
+##### * Remove in list.txt 
+##### * Timespan.txt 
+##### * Trim()除去空格.txt 
+##### * key word-Extern.txt 
+##### * key word-Static.txt 
+##### * key word-bool.txt 
+##### * key word-convert.txt 
+##### * loop.txt 
 
 
 
