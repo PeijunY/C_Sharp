@@ -1,44 +1,45 @@
 1. public virtual void Add( object key, object value ); 
-Ïò Hashtable Ìí¼ÓÒ»¸ö´øÓĞÖ¸¶¨µÄ¼üºÍÖµµÄÔªËØ¡£
+å‘ Hashtable æ·»åŠ ä¸€ä¸ªå¸¦æœ‰æŒ‡å®šçš„é”®å’Œå€¼çš„å…ƒç´ ã€‚
 2. public virtual void Clear(); 
-´Ó Hashtable ÖĞÒÆ³ıËùÓĞµÄÔªËØ¡£
+ä» Hashtable ä¸­ç§»é™¤æ‰€æœ‰çš„å…ƒç´ ã€‚
 3. public virtual bool ContainsKey( object key ); 
-ÅĞ¶Ï Hashtable ÊÇ·ñ°üº¬Ö¸¶¨µÄ¼ü¡£
+åˆ¤æ–­ Hashtable æ˜¯å¦åŒ…å«æŒ‡å®šçš„é”®ã€‚
 4. public virtual bool ContainsValue( object value ); 
-ÅĞ¶Ï Hashtable ÊÇ·ñ°üº¬Ö¸¶¨µÄÖµ¡£
+åˆ¤æ–­ Hashtable æ˜¯å¦åŒ…å«æŒ‡å®šçš„å€¼ã€‚
 5. public virtual void Remove( object key ); 
-´Ó Hashtable ÖĞÒÆ³ı´øÓĞÖ¸¶¨µÄ¼üµÄÔªËØ¡£
+ä» Hashtable ä¸­ç§»é™¤å¸¦æœ‰æŒ‡å®šçš„é”®çš„å…ƒç´ ã€‚
 ===================================================================================================
-ÒÔÏÂÕâ¸ö´úÂë°üº¬ÉÏÃæËùÓĞ£¡£¡ÊìÏ¤Õâ¸öÊ¹ÓÃ·½·¨£¡£¡£¡
+ä»¥ä¸‹è¿™ä¸ªä»£ç åŒ…å«ä¸Šé¢æ‰€æœ‰ï¼ï¼ç†Ÿæ‚‰è¿™ä¸ªä½¿ç”¨æ–¹æ³•ï¼ï¼ï¼
+Hashtable ç±»ä»£è¡¨äº†ä¸€ç³»åˆ—åŸºäºé”®çš„å“ˆå¸Œä»£ç ç»„ç»‡èµ·æ¥çš„é”®/å€¼å¯¹ã€‚å®ƒä½¿ç”¨é”®æ¥è®¿é—®é›†åˆä¸­çš„å…ƒç´ ã€‚
 ===================================================================================================
 using System;
-using System.Collections; //fileÊ¹ÓÃHashtableÊ±£¬±ØĞëÒıÈëÕâ¸öÃüÃû¿Õ¼ä
+using System.Collections; //fileä½¿ç”¨Hashtableæ—¶ï¼Œå¿…é¡»å¼•å…¥è¿™ä¸ªå‘½åç©ºé—´
 class Program
 {
     public static void Main()
     {
-        Hashtable ht = new Hashtable(); //´´½¨Ò»¸öHashtableÊµÀı
-        ht.Add("±±¾©", "µÛ¶¼"); //Ìí¼Ókey and value¼üÖµ¶Ô
-        ht.Add("ÉÏº£", "Ä§¶¼");
-        ht.Add("¹ãÖİ", "Ê¡»á");
-        ht.Add("ÉîÛÚ", "ÌØÇø");
+        Hashtable ht = new Hashtable(); //åˆ›å»ºä¸€ä¸ªHashtableå®ä¾‹
+        ht.Add("åŒ—äº¬", "å¸éƒ½"); //æ·»åŠ key and valueé”®å€¼å¯¹
+        ht.Add("ä¸Šæµ·", "é­”éƒ½");
+        ht.Add("å¹¿å·", "çœä¼š");
+        ht.Add("æ·±åœ³", "ç‰¹åŒº");
 
-        string capital = (string)ht["±±¾©"];
-        Console.WriteLine(ht.Contains("ÉÏº£")); //¡°ÅĞ¶Ï¡± ¹şÏ£±íÊÇ·ñ°üº¬ÌØ¶¨¼ü,Æä·µ»ØÖµÎªtrue»òfalse
+        string capital = (string)ht["åŒ—äº¬"];
+        Console.WriteLine(ht.Contains("ä¸Šæµ·")); //â€œåˆ¤æ–­â€ å“ˆå¸Œè¡¨æ˜¯å¦åŒ…å«ç‰¹å®šé”®,å…¶è¿”å›å€¼ä¸ºtrueæˆ–false
 
         foreach (var s in ht.Keys)
         {
-            Console.WriteLine(s + ": " + ht[s]);  //*****ht[s]±íÊ¾¼ükeyÎªsÊ±£¬htµÄvalue*****
+            Console.WriteLine(s + ": " + ht[s]);  //*****ht[s]è¡¨ç¤ºé”®keyä¸ºsæ—¶ï¼Œhtçš„value*****
         }
-        //ICollection key = ht.Keys;      //µÈÍ¬ÒÔÉÏ
+        //ICollection key = ht.Keys;      //ç­‰åŒä»¥ä¸Š
         //foreach (string s in key)
         //{
         //    Console.WriteLine(s + ":" + ht[s]);           
         //}
         Console.WriteLine("============================");
 
-        ht.Remove("ÉîÛÚ");                        //ÒÆ³ıÒ»¸ökeyvalue¼üÖµ¶Ô
-        //ht.Clear(); //ÒÆ³ıËùÓĞÔªËØ  
+        ht.Remove("æ·±åœ³");                        //ç§»é™¤ä¸€ä¸ªkeyvalueé”®å€¼å¯¹
+        //ht.Clear(); //ç§»é™¤æ‰€æœ‰å…ƒç´   
 
         //foreach (string s in key)
         //{
