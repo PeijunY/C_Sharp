@@ -160,7 +160,7 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// ÊäÈëÒ»¸öÕûÊý£¬Êä³ö¸ÃÊý¶þ½øÖÆ±íÊ¾ÖÐ1µÄ¸öÊý¡£ÆäÖÐ¸ºÊýÓÃ²¹Âë±íÊ¾¡£
+    /// è¾“å…¥ä¸€ä¸ªæ•´æ•°ï¼Œè¾“å‡ºè¯¥æ•°äºŒè¿›åˆ¶è¡¨ç¤ºä¸­1çš„ä¸ªæ•°ã€‚å…¶ä¸­è´Ÿæ•°ç”¨è¡¥ç è¡¨ç¤ºã€‚
     /// </summary>
     class NumberOfOne
     {
@@ -172,7 +172,7 @@ namespace Algorithm
         }
 
         /// <summary>
-        /// ¸ºÊý°´²¹Âë¼ÆËã
+        /// è´Ÿæ•°æŒ‰è¡¥ç è®¡ç®—
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
@@ -207,9 +207,9 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// ÊäÈëÒ»¸öÕûÊýÊý×é£¬ÊµÏÖÒ»¸öº¯ÊýÀ´µ÷Õû¸ÃÊý×éÖÐÊý×ÖµÄË³Ðò£¬
-    /// Ê¹µÃËùÓÐµÄÆæÊýÎ»ÓÚÊý×éµÄÇ°°ë²¿·Ö£¬ËùÓÐµÄÅ¼ÊýÎ»ÓÚÎ»ÓÚÊý×éµÄºó°ë²¿·Ö£¬
-    /// ²¢±£Ö¤ÆæÊýºÍÆæÊý£¬Å¼ÊýºÍÅ¼ÊýÖ®¼äµÄÏà¶ÔÎ»ÖÃ²»±ä¡£
+    /// è¾“å…¥ä¸€ä¸ªæ•´æ•°æ•°ç»„ï¼Œå®žçŽ°ä¸€ä¸ªå‡½æ•°æ¥è°ƒæ•´è¯¥æ•°ç»„ä¸­æ•°å­—çš„é¡ºåºï¼Œ
+    /// ä½¿å¾—æ‰€æœ‰çš„å¥‡æ•°ä½äºŽæ•°ç»„çš„å‰åŠéƒ¨åˆ†ï¼Œæ‰€æœ‰çš„å¶æ•°ä½äºŽä½äºŽæ•°ç»„çš„åŽåŠéƒ¨åˆ†ï¼Œ
+    /// å¹¶ä¿è¯å¥‡æ•°å’Œå¥‡æ•°ï¼Œå¶æ•°å’Œå¶æ•°ä¹‹é—´çš„ç›¸å¯¹ä½ç½®ä¸å˜ã€‚
     /// </summary>
     class SortArray
     {
@@ -259,7 +259,7 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// ÊäÈëÒ»¸öÁ´±í£¬·´×ªÁ´±íºó£¬Êä³öÁ´±íµÄËùÓÐÔªËØ¡£
+    /// è¾“å…¥ä¸€ä¸ªé“¾è¡¨ï¼Œåè½¬é“¾è¡¨åŽï¼Œè¾“å‡ºé“¾è¡¨çš„æ‰€æœ‰å…ƒç´ ã€‚
     /// </summary>
     class ReverseLinkedList
     {
@@ -309,7 +309,7 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// ÊäÈëÁ½¿Ã¶þ²æÊ÷A£¬B£¬ÅÐ¶ÏBÊÇ²»ÊÇAµÄ×Ó½á¹¹¡££¨ps£ºÔ¼¶¨¿ÕÊ÷²»ÊÇÈÎÒâÒ»¸öÊ÷µÄ×Ó½á¹¹£©
+    /// è¾“å…¥ä¸¤æ£µäºŒå‰æ ‘Aï¼ŒBï¼Œåˆ¤æ–­Bæ˜¯ä¸æ˜¯Açš„å­ç»“æž„ã€‚ï¼ˆpsï¼šçº¦å®šç©ºæ ‘ä¸æ˜¯ä»»æ„ä¸€ä¸ªæ ‘çš„å­ç»“æž„ï¼‰
     /// </summary>
     class BinaryTreeSolution
     {
@@ -365,7 +365,7 @@ namespace Algorithm
         }
 
         /// <summary>
-        /// ´ÓÉÏÍùÏÂ´òÓ¡³ö¶þ²æÊ÷µÄÃ¿¸ö½Úµã£¬Í¬²ã½Úµã´Ó×óÖÁÓÒ´òÓ¡¡£
+        /// ä»Žä¸Šå¾€ä¸‹æ‰“å°å‡ºäºŒå‰æ ‘çš„æ¯ä¸ªèŠ‚ç‚¹ï¼ŒåŒå±‚èŠ‚ç‚¹ä»Žå·¦è‡³å³æ‰“å°ã€‚
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
@@ -414,9 +414,9 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// ÊäÈëÒ»¸ö¾ØÕó£¬°´ÕÕ´ÓÍâÏòÀïÒÔË³Ê±ÕëµÄË³ÐòÒÀ´Î´òÓ¡³öÃ¿Ò»¸öÊý×Ö¡£
-    /// ÀýÈç£¬Èç¹ûÊäÈëÈçÏÂ¾ØÕó£º 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 ÔòÒÀ´Î´òÓ¡³öÊý×Ö1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.
-    /// ²âÊÔÓÃÀý: 5x5, ÄÜÕýÈ·ÊäÈëÖÐÐÄµÄÊý£¬1x5, 5x1µÈµÈ
+    /// è¾“å…¥ä¸€ä¸ªçŸ©é˜µï¼ŒæŒ‰ç…§ä»Žå¤–å‘é‡Œä»¥é¡ºæ—¶é’ˆçš„é¡ºåºä¾æ¬¡æ‰“å°å‡ºæ¯ä¸€ä¸ªæ•°å­—ã€‚
+    /// ä¾‹å¦‚ï¼Œå¦‚æžœè¾“å…¥å¦‚ä¸‹çŸ©é˜µï¼š 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 åˆ™ä¾æ¬¡æ‰“å°å‡ºæ•°å­—1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.
+    /// æµ‹è¯•ç”¨ä¾‹: 5x5, èƒ½æ­£ç¡®è¾“å…¥ä¸­å¿ƒçš„æ•°ï¼Œ1x5, 5x1ç­‰ç­‰
     /// PrintMatrix.png
     /// </summary>
     class PrintMatrix
@@ -478,7 +478,7 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// ¶¨ÒåÕ»µÄÊý¾Ý½á¹¹£¬ÇëÔÚ¸ÃÀàÐÍÖÐÊµÏÖÒ»¸öÄÜ¹»µÃµ½Õ»×îÐ¡ÔªËØµÄminº¯Êý¡£
+    /// å®šä¹‰æ ˆçš„æ•°æ®ç»“æž„ï¼Œè¯·åœ¨è¯¥ç±»åž‹ä¸­å®žçŽ°ä¸€ä¸ªèƒ½å¤Ÿå¾—åˆ°æ ˆæœ€å°å…ƒç´ çš„minå‡½æ•°ã€‚
     /// </summary>
     class CustStack
     {
@@ -549,10 +549,10 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// ÊäÈëÁ½¸öÕûÊýÐòÁÐ£¬µÚÒ»¸öÐòÁÐ±íÊ¾Õ»µÄÑ¹ÈëË³Ðò£¬ÇëÅÐ¶ÏµÚ¶þ¸öÐòÁÐÊÇ·ñÎª¸ÃÕ»µÄµ¯³öË³Ðò¡£
-    /// ¼ÙÉèÑ¹ÈëÕ»µÄËùÓÐÊý×Ö¾ù²»ÏàµÈ¡£ÀýÈçÐòÁÐ1,2,3,4,5ÊÇÄ³Õ»µÄÑ¹ÈëË³Ðò£¬
-    /// ÐòÁÐ4,5,3,2,1ÊÇ¸ÃÑ¹Õ»ÐòÁÐ¶ÔÓ¦µÄÒ»¸öµ¯³öÐòÁÐ£¬µ«4,3,5,1,2¾Í²»¿ÉÄÜÊÇ¸ÃÑ¹Õ»ÐòÁÐµÄµ¯³öÐòÁÐ¡£
-    /// £¨×¢Òâ£ºÕâÁ½¸öÐòÁÐµÄ³¤¶ÈÊÇÏàµÈµÄ£©
+    /// è¾“å…¥ä¸¤ä¸ªæ•´æ•°åºåˆ—ï¼Œç¬¬ä¸€ä¸ªåºåˆ—è¡¨ç¤ºæ ˆçš„åŽ‹å…¥é¡ºåºï¼Œè¯·åˆ¤æ–­ç¬¬äºŒä¸ªåºåˆ—æ˜¯å¦ä¸ºè¯¥æ ˆçš„å¼¹å‡ºé¡ºåºã€‚
+    /// å‡è®¾åŽ‹å…¥æ ˆçš„æ‰€æœ‰æ•°å­—å‡ä¸ç›¸ç­‰ã€‚ä¾‹å¦‚åºåˆ—1,2,3,4,5æ˜¯æŸæ ˆçš„åŽ‹å…¥é¡ºåºï¼Œ
+    /// åºåˆ—4,5,3,2,1æ˜¯è¯¥åŽ‹æ ˆåºåˆ—å¯¹åº”çš„ä¸€ä¸ªå¼¹å‡ºåºåˆ—ï¼Œä½†4,3,5,1,2å°±ä¸å¯èƒ½æ˜¯è¯¥åŽ‹æ ˆåºåˆ—çš„å¼¹å‡ºåºåˆ—ã€‚
+    /// ï¼ˆæ³¨æ„ï¼šè¿™ä¸¤ä¸ªåºåˆ—çš„é•¿åº¦æ˜¯ç›¸ç­‰çš„ï¼‰
     /// </summary>
     class CheckPopOrder : ITest
     {
@@ -594,9 +594,9 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// Êý×éÖÐÓÐÒ»¸öÊý×Ö³öÏÖµÄ´ÎÊý³¬¹ýÊý×é³¤¶ÈµÄÒ»°ë£¬ÇëÕÒ³öÕâ¸öÊý×Ö¡£
-    /// ÀýÈçÊäÈëÒ»¸ö³¤¶ÈÎª9µÄÊý×é{1,2,3,2,2,2,5,4,2}, 
-    /// ÓÉÓÚÊý×Ö2ÔÚÊý×éÖÐ³öÏÖÁË5´Î£¬³¬¹ýÊý×é³¤¶ÈµÄÒ»°ë£¬Òò´ËÊä³ö2¡£Èç¹û²»´æÔÚÔòÊä³ö0¡£
+    /// æ•°ç»„ä¸­æœ‰ä¸€ä¸ªæ•°å­—å‡ºçŽ°çš„æ¬¡æ•°è¶…è¿‡æ•°ç»„é•¿åº¦çš„ä¸€åŠï¼Œè¯·æ‰¾å‡ºè¿™ä¸ªæ•°å­—ã€‚
+    /// ä¾‹å¦‚è¾“å…¥ä¸€ä¸ªé•¿åº¦ä¸º9çš„æ•°ç»„{1,2,3,2,2,2,5,4,2}, 
+    /// ç”±äºŽæ•°å­—2åœ¨æ•°ç»„ä¸­å‡ºçŽ°äº†5æ¬¡ï¼Œè¶…è¿‡æ•°ç»„é•¿åº¦çš„ä¸€åŠï¼Œå› æ­¤è¾“å‡º2ã€‚å¦‚æžœä¸å­˜åœ¨åˆ™è¾“å‡º0ã€‚
     /// </summary>
     class MoreThanHalfNum : ITest
     {
@@ -630,9 +630,9 @@ namespace Algorithm
         }
 
         /// <summary>
-        /// ²ÉÓÃÕóµØ¹¥ÊØµÄË¼Ïë£º µÚÒ»¸öÊý×Ö×÷ÎªµÚÒ»¸öÊ¿±ø£¬ÊØÕóµØ£»count = 1£» 
-        /// Óöµ½ÏàÍ¬ÔªËØ£¬count++; Óöµ½²»ÏàÍ¬ÔªËØ£¬¼´ÎªµÐÈË£¬Í¬¹éÓÚ¾¡,count--£»
-        /// µ±Óöµ½countÎª0µÄÇé¿ö£¬ÓÖÒÔÐÂµÄ[i]Öµ×÷ÎªÊØÕóµØµÄÊ¿±ø£¬¼ÌÐøÏÂÈ¥£¬µ½×îºó»¹ÁôÔÚÕóµØÉÏµÄÊ¿±ø£¬ÓÐ¿ÉÄÜÊÇÖ÷ÔªËØ¡£
+        /// é‡‡ç”¨é˜µåœ°æ”»å®ˆçš„æ€æƒ³ï¼š ç¬¬ä¸€ä¸ªæ•°å­—ä½œä¸ºç¬¬ä¸€ä¸ªå£«å…µï¼Œå®ˆé˜µåœ°ï¼›count = 1ï¼› 
+        /// é‡åˆ°ç›¸åŒå…ƒç´ ï¼Œcount++; é‡åˆ°ä¸ç›¸åŒå…ƒç´ ï¼Œå³ä¸ºæ•Œäººï¼ŒåŒå½’äºŽå°½,count--ï¼›
+        /// å½“é‡åˆ°countä¸º0çš„æƒ…å†µï¼Œåˆä»¥æ–°çš„[i]å€¼ä½œä¸ºå®ˆé˜µåœ°çš„å£«å…µï¼Œç»§ç»­ä¸‹åŽ»ï¼Œåˆ°æœ€åŽè¿˜ç•™åœ¨é˜µåœ°ä¸Šçš„å£«å…µï¼Œæœ‰å¯èƒ½æ˜¯ä¸»å…ƒç´ ã€‚
         /// </summary>
         /// <param name="numbers"></param>
         /// <returns></returns>
@@ -677,9 +677,9 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// 1. ÊäÈën¸öÕûÊý£¬ÕÒ³öÆäÖÐ×îÐ¡µÄK¸öÊý¡£
-    /// ÀýÈçÊäÈë4,5,1,6,2,7,3,8Õâ8¸öÊý×Ö£¬Ôò×îÐ¡µÄ4¸öÊý×ÖÊÇ1,2,3,4¡£
-    /// 2. ¼ÆËãÁ¬Ðø×ÓÏòÁ¿µÄ×î´óºÍ
+    /// 1. è¾“å…¥nä¸ªæ•´æ•°ï¼Œæ‰¾å‡ºå…¶ä¸­æœ€å°çš„Kä¸ªæ•°ã€‚
+    /// ä¾‹å¦‚è¾“å…¥4,5,1,6,2,7,3,8è¿™8ä¸ªæ•°å­—ï¼Œåˆ™æœ€å°çš„4ä¸ªæ•°å­—æ˜¯1,2,3,4ã€‚
+    /// 2. è®¡ç®—è¿žç»­å­å‘é‡çš„æœ€å¤§å’Œ
     /// </summary>
     class GetLeastNumbers : ITest
     {
@@ -760,7 +760,7 @@ namespace Algorithm
             return max;
         }
         /// <summary>
-        /// ¿ìËÙÅÅÐòµÄ±äÐÎ
+        /// å¿«é€ŸæŽ’åºçš„å˜å½¢
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
@@ -784,8 +784,8 @@ namespace Algorithm
     }
 
     /// <summary>
-    /// ¶ÔÓÚÒ»¸ö¸ø¶¨µÄ×Ö·ûÐòÁÐS£¬ÇëÄã°ÑÆäÑ­»·×óÒÆKÎ»ºóµÄÐòÁÐÊä³ö¡£
-    /// ÀýÈç£¬×Ö·ûÐòÁÐS="abcXYZdef",ÒªÇóÊä³öÑ­»·×óÒÆ3Î»ºóµÄ½á¹û£¬¼´"XYZdefabc"¡£
+    /// å¯¹äºŽä¸€ä¸ªç»™å®šçš„å­—ç¬¦åºåˆ—Sï¼Œè¯·ä½ æŠŠå…¶å¾ªçŽ¯å·¦ç§»Kä½åŽçš„åºåˆ—è¾“å‡ºã€‚
+    /// ä¾‹å¦‚ï¼Œå­—ç¬¦åºåˆ—S="abcXYZdef",è¦æ±‚è¾“å‡ºå¾ªçŽ¯å·¦ç§»3ä½åŽçš„ç»“æžœï¼Œå³"XYZdefabc"ã€‚
     /// </summary>
     class RotateString : ITest
     {
@@ -1018,37 +1018,37 @@ namespace Algorithm
     }
     public class Node<T>
     {
-        private T data; //Êý¾ÝÓò ´æ´¢Êý¾ÝµÄ¶ÔÏó 
-        private Node<T> next; //ÒýÓÃÓò Ö¸ÏòÏÂÒ»¸ö¶ÔÏó 
+        private T data; //æ•°æ®åŸŸ å­˜å‚¨æ•°æ®çš„å¯¹è±¡ 
+        private Node<T> next; //å¼•ç”¨åŸŸ æŒ‡å‘ä¸‹ä¸€ä¸ªå¯¹è±¡ 
 
-        //¹¹ÔìÆ÷ 
+        //æž„é€ å™¨ 
         public Node(T val, Node<T> p)
         {
             data = val;
             next = p;
         }
 
-        //¹¹ÔìÆ÷ 
+        //æž„é€ å™¨ 
         public Node(Node<T> n)
         {
             next = n;
         }
 
-        //¹¹ÔìÆ÷ 
+        //æž„é€ å™¨ 
         public Node(T val)
         {
             data = val;
             next = null;
         }
 
-        //¹¹ÔìÆ÷ 
+        //æž„é€ å™¨ 
         public Node()
         {
             data = default(T);
             next = null;
         }
 
-        //Êý¾ÝÓòÊôÐÔ 
+        //æ•°æ®åŸŸå±žæ€§ 
         public T Data
         {
             get
@@ -1061,7 +1061,7 @@ namespace Algorithm
             }
         }
 
-        //ÒýÓÃÓòÊôÐÔ 
+        //å¼•ç”¨åŸŸå±žæ€§ 
         public Node<T> Next
         {
             get
