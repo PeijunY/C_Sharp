@@ -5,25 +5,25 @@ Content:
 ========================================
 Algorithm
 ---------------------
-# 3 Sum.cs 
-# AddSpace.cs 
-# Bubbling Methods.cs 
-# Get the count of 1 in a binary numb
-# Insert Interval.cs 
-# Maximal Rectangle.cs 
-# Order the array number.cs 
-# Random_no-Repeat.cs 
-# Reverse_an_integer.cs 
-# Sent mail.cs 
-# Spiral Matrix.cs 
-# Stack-to find the min value.
-##Could not finish it.
-# StringToInt.cs 
-# WordLadder.cs 
-# sum-switch.cs 
-# WordLadder.cs 
-# Upload data from local.cs 
-# 合数.cs 
+### 3 Sum.cs 
+### AddSpace.cs 
+### Bubbling Methods.cs 
+### Get the count of 1 in a binary numb
+### Insert Interval.cs 
+### Maximal Rectangle.cs 
+### Order the array number.cs 
+### Random_no-Repeat.cs 
+### Reverse_an_integer.cs 
+### Sent mail.cs 
+### Spiral Matrix.cs 
+### Stack-to find the min value.
+##### Could not finish it.
+### StringToInt.cs 
+### WordLadder.cs 
+### sum-switch.cs 
+### WordLadder.cs 
+### Upload data from local.cs 
+### 合数.cs 
 
 
 
