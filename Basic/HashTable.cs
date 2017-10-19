@@ -49,3 +49,23 @@ class Program
         Console.ReadKey();
     }
 }
+=========================================================================================
+ 遍历哈希表
+ 遍历哈希表需要用到DictionaryEntry Object，代码如下：
+for(DictionaryEntry de in ht) //ht为一个Hashtable实例
+{
+   Console.WriteLine(de.Key);  //de.Key对应于keyvalue键值对key
+   Console.WriteLine(de.Value);  //de.Key对应于keyvalue键值对value
+}
+ 
+遍历键
+foreach (int key in hashtable.Keys)
+{
+    Console.WriteLine(key);
+}
+ 
+遍历值
+foreach (string value in hashtable.Values)
+{
+    Console.WriteLine(value);
+}
