@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Word_Ladder
 {
+    //find all shortest transformation sequence(s) from beginWord to endWord
     //beginWord = "hit"
     //endWordWord = "cog"
     //wordList<string> = ["hot","dot","dog","lot","log","cog"]
