@@ -1,4 +1,4 @@
-Èç¹ûÊÇ²»¿¼ÂÇÊı×ÖµÄÖØ¸´£¬Èô²úÉú100ÒÔÄÚµÄÈÎÒâÊı¿ÉÒÔÓÃÈçÏÂ:
+å¦‚æœæ˜¯ä¸è€ƒè™‘æ•°å­—çš„é‡å¤ï¼Œè‹¥äº§ç”Ÿ100ä»¥å†…çš„ä»»æ„æ•°å¯ä»¥ç”¨å¦‚ä¸‹:
 Random r = new Random();
 int num = r.Next(Max)   ---Max==100
 ==========================================================================
@@ -14,8 +14,8 @@ class Program
             }
             Random r = new Random();
 
-            int[] result= new int[10];  //ÓÃÀ´±£´æËæ»úÉú³ÉµÄ²»ÖØ¸´µÄ10¸öÊı
-            int MaxValue = 15;           //ÉèÖÃÉÏÏŞ
+            int[] result= new int[10];  //ç”¨æ¥ä¿å­˜éšæœºç”Ÿæˆçš„ä¸é‡å¤çš„10ä¸ªæ•°
+            int MaxValue = 15;           //è®¾ç½®ä¸Šé™
             int id;
             for (int j = 0; j < 10; j++)
             {
@@ -26,7 +26,7 @@ class Program
                 }
                 else
                 {
-                    j--;                 //µ±ÓĞÉú³ÉÖØ¸´µÄÊı×ÖÊ±ÔÙ´Î¡°²Ù×÷Ëæ»úÉú³É¡±
+                    j--;                 //å½“æœ‰ç”Ÿæˆé‡å¤çš„æ•°å­—æ—¶å†æ¬¡â€œæ“ä½œéšæœºç”Ÿæˆâ€
                 }
             }
             foreach (int c in result)
@@ -38,7 +38,7 @@ class Program
     }
 
 ==========================================================================
-Method2£º
+Method2ï¼š
 class Program
     {
         static void Main(string[] args)
@@ -50,15 +50,15 @@ class Program
             }
             Random r = new Random();
            
-            int[] result = new int[10];  //ÓÃÀ´±£´æËæ»úÉú³ÉµÄ²»ÖØ¸´µÄ10¸öÊı
-            int MaxValue = 15;           //ÉèÖÃÉÏÏŞ
+            int[] result = new int[10];  //ç”¨æ¥ä¿å­˜éšæœºç”Ÿæˆçš„ä¸é‡å¤çš„10ä¸ªæ•°
+            int MaxValue = 15;           //è®¾ç½®ä¸Šé™
             int id;
             for (int j = 0; j < 10; j++)
             {
                 id = r.Next(1, MaxValue - 1);               
-                result[j] = index[id];  //ÔÚËæ»úÎ»ÖÃÈ¡³öÒ»¸öÊı£¬±£´æµ½½á¹ûÊı×é    
-                //ÔÙ°Ñindex[i]Ğ´ÈëÊı×éresultºó£¬½«×îºóÒ»Î»Êıindex[MaxValue - 1]À´Ìæ»»£¬¶Ô£¬¡°Ìæ»»¡±Õâ¸öÔÚindexÊı×éÖĞµÄindex[i]Öµ£¡Ö®ºó×ÜµÄ¸öÊıÔÙÉÙÒ»£¡
-                //Õâ¸ö¾ÍÊÇ±¾µÀËã·¨µÄ¹Ø¼üÖ®´¦£¡           
+                result[j] = index[id];  //åœ¨éšæœºä½ç½®å–å‡ºä¸€ä¸ªæ•°ï¼Œä¿å­˜åˆ°ç»“æœæ•°ç»„    
+                //å†æŠŠindex[i]å†™å…¥æ•°ç»„resultåï¼Œå°†æœ€åä¸€ä½æ•°index[MaxValue - 1]æ¥æ›¿æ¢ï¼Œå¯¹ï¼Œâ€œæ›¿æ¢â€è¿™ä¸ªåœ¨indexæ•°ç»„ä¸­çš„index[i]å€¼ï¼ä¹‹åæ€»çš„ä¸ªæ•°å†å°‘ä¸€ï¼
+                //è¿™ä¸ªå°±æ˜¯æœ¬é“ç®—æ³•çš„å…³é”®ä¹‹å¤„ï¼           
                 index[id] = index[MaxValue - 1];              
                 MaxValue--;
             }
@@ -70,7 +70,7 @@ class Program
         }
     }
 ==========================================================================
-Method3£º
+Method3ï¼š
     class Program
     {
         static void Main(string[] args)
@@ -84,7 +84,7 @@ Method3£º
                 int nValue = rm.Next(10, 25);
                 if (!hashtable.ContainsValue(nValue) && nValue != 0)
                 {
-                    hashtable.Add(nValue, nValue);  //hashtable²»ÄÜÌí¼ÓÖØ¸´¼ü
+                    hashtable.Add(nValue, nValue);  //hashtableä¸èƒ½æ·»åŠ é‡å¤é”®
                     Console.Write(nValue + " ");
                 }
             }
