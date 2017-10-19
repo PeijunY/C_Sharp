@@ -1,4 +1,4 @@
-//£¨3£©±àĞ´Ò»¸ö¼òµ¥µÄ¼ÆËãÆ÷³ÌĞò£¬ÄÜ¹»¸ù¾İÓÃ»§´Ó¼üÅÌÊäÈëµÄÔËËãÖ¸ÁîºÍÕûÊı£¬½øĞĞ¼òµ¥µÄ¼Ó¼õ³Ë³ıÔËËã¡£
+//ï¼ˆ3ï¼‰ç¼–å†™ä¸€ä¸ªç®€å•çš„è®¡ç®—å™¨ç¨‹åºï¼Œèƒ½å¤Ÿæ ¹æ®ç”¨æˆ·ä»é”®ç›˜è¾“å…¥çš„è¿ç®—æŒ‡ä»¤å’Œæ•´æ•°ï¼Œè¿›è¡Œç®€å•çš„åŠ å‡ä¹˜é™¤è¿ç®—ã€‚
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,10 +8,10 @@ namespace exercise3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ÇëÊäÈëÁ½¸öÔËËãÊı×Ö£º");
+            Console.WriteLine("è¯·è¾“å…¥ä¸¤ä¸ªè¿ç®—æ•°å­—ï¼š");
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine()); 
-            Console.WriteLine("ÇëÊäÈëÔËËã·ûºÅ£º");
+            Console.WriteLine("è¯·è¾“å…¥è¿ç®—ç¬¦å·ï¼š");
             char s = Convert .ToChar (Console .ReadLine());
             switch (s)
             {
@@ -19,7 +19,7 @@ namespace exercise3
                 case '-': Console.WriteLine(a + "-" + b + "={0}", a - b); break;
                 case '*': Console.WriteLine(a + "*" + b + "={0}", a * b); break;
                 case '/': Console.WriteLine(a + "/" + b + "={0}", (Single )a / b); break;
-                default: Console.WriteLine("ÊäÈëµÄÔËËã·ûÓĞÎó£¡"); break;
+                default: Console.WriteLine("è¾“å…¥çš„è¿ç®—ç¬¦æœ‰è¯¯ï¼"); break;
             }
         }
     }
