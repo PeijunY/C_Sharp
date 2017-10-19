@@ -1,4 +1,4 @@
-//£¨3£©Ğ´³öÒ»¸ö¿ØÖÆÌ¨Ó¦ÓÃ³ÌĞò£¬ÊµÏÖÒ»¸östringÀàĞÍ±äÁ¿×ª»»ÎªÒ»¸öintÀàĞÍ±äÁ¿µÄ¶àÖÖ·½·¨¡£
+//ï¼ˆ3ï¼‰å†™å‡ºä¸€ä¸ªæ§åˆ¶å°åº”ç”¨ç¨‹åºï¼Œå®ç°ä¸€ä¸ªstringç±»å‹å˜é‡è½¬æ¢ä¸ºä¸€ä¸ªintç±»å‹å˜é‡çš„å¤šç§æ–¹æ³•ã€‚
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,8 +9,8 @@ namespace exercise3
         static void Main(string[] args)
         {
             string s = Console.ReadLine();
-            int i = Convert.ToInt32(s);         //µÚ1ÖÖ·½·¨
-            int j = Int32.Parse(s);           //µÚ2ÖÖ·½·¨
+            int i = Convert.ToInt32(s);         //ç¬¬1ç§æ–¹æ³•
+            int j = Int32.Parse(s);           //ç¬¬2ç§æ–¹æ³•
             Console .WriteLine ("{0},{1}",i,j);
         }
     }
