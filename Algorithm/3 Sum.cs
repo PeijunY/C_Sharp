@@ -20,6 +20,7 @@ class Program
             Console.WriteLine("Please input a set array , example 1,2,3,4,5,6");
             string[] array = Console.ReadLine().Split(',');
             int[] nums = Array.ConvertAll<string, int>(array, s => int.Parse(s));
+          //Sort this array from small to big.
             Array.Sort(nums);
          //Solution 1:
             if (nums.Length >= 3)
