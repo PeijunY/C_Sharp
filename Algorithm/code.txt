@@ -1,0 +1,195 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+namespace ExportAndImport
+{
+    class Program
+    {
+        private const int TxtCol = 3;
+        static void Main(string[] args)
+        {
+            List<string[]> txtDataSource = LoadDataFromTxt(@"F:\JeecgProject\1.txt");           
+            string sqlstmt = GenerateSqlScript(txtDataSource);
+            WriteToTxt(sqlstmt, @"F:\JeecgProject\1Out.txt");
+        }
+        public static List<string[]> LoadDataFromTxt(string filePath)
+        {
+            
+            string[] txtData = new string[TxtCol];
+            StreamReader sr = new StreamReader(filePath);
+            string nextLine = sr.ReadLine();
+            Regex regObj = new Regex(@"[0-9]");
+            List<string[]> tableList = new List<string[]>();
+            int i = 1;
+            while (nextLine != null)
+            {
+                if (nextLine == "")
+                {
+                    goto Next;
+                }
+                nextLine = nextLine.Replace("\t", " ");
+                if (nextLine.Contains(","))
+                {
+                    //*****We will add "," between the words.*****
+                    string[] Arr = nextLine.Split(',');
+                    txtData[0] = Arr[0].Trim();
+                    txtData[1] = Arr[1].Trim();
+                    #region when we change decimal to 'decimal(38,2)'
+                    //if (nextLine.ToLower().Contains("decimal"))
+                    //{
+                    //    //这个是在Decimal（38，2）有这样的后缀的时候    
+                    //    txtData[1] = Arr[1].Trim() + "," + Arr[2].Trim();
+                    //    //默认这后面没有数据！
+                    //    if (Arr.Length > 3)
+                    //    {
+                    //        txtData[2] = Arr[3].Trim();
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    txtData[1] = Arr[1].Trim();
+                    //    if (Arr.Length > 2)
+                    //    {
+                    //        txtData[2] = Arr[2].Trim();
+                    //    }
+                    //}
+                    #endregion
+                }
+                //Table name
+                else if (regObj.IsMatch(nextLine))
+                {
+                    nextLine=nextLine.Replace("OBJECT Table", "").Trim();
+                    string[] NameSplit = nextLine.Split(' ');
+                    string strTableName = string.Empty;
+                    for (int j = 1; j < NameSplit.Length; j++)
+                    {                       
+                        strTableName = strTableName + NameSplit[j];                       
+                    }
+                    txtData[0] = strTableName.Trim();
+                    txtData[1] = "";
+                    txtData[2] = "";     
+                }
+                if (txtData[0] != null)
+                {
+                    //change the name when the name is mysql key word. 
+                    // To do list!@@@@@@@
+                    if (txtData[0].ToLower().Equals("code"))
+                    {
+                        txtData[0] = "code01";
+                        //Console.WriteLine("Please change the 'code' to a new word:");
+                        //txtData[0] = Console.ReadLine();
+                    }
+                    if (txtData[0].ToLower().Equals("email"))
+                    {
+                        //Console.WriteLine("Please change the 'email' to a new word:");
+                        //txtData[0] = Console.ReadLine();
+                        txtData[0] = "email01";
+                    }
+                    //Modify the name.
+                    // To do list!@@@@@@@
+                    if (txtData[0].Contains(".")|| txtData[0].Contains("/") || txtData[0].Contains("-") || txtData[0].Contains("(") || txtData[0].Contains(")") || txtData[0].Contains("%"))
+                    {
+                        txtData[0] = txtData[0].Replace(".", "");
+                        txtData[0] = txtData[0].Replace("/", "");
+                        txtData[0] = txtData[0].Replace("-", "");
+                        txtData[0] = txtData[0].Replace("(", "");
+                        txtData[0] = txtData[0].Replace(")", "");
+                        txtData[0] = txtData[0].Replace("%", "Per");
+                    }                    
+                    //delete the blank space
+                    txtData[0] = txtData[0].Replace(" ", "");
+                    txtData[0] = txtData[0].Replace("\t", "");
+
+                    //Replace some key word,such as: code,text
+                    if (txtData[0].ToLower().Equals("keys"))
+                    {
+                        txtData[1] = "No.";
+                    }
+                    if (txtData[1].ToLower().Contains("code") || txtData[1].ToLower().Contains("text") || txtData[1].ToLower().Contains("option"))
+                    {
+                        txtData[1]= "varchar(50)";
+                    }
+                    if (txtData[1].ToLower().Contains("int"))
+                    {
+                        txtData[1] = "int";
+                    }
+
+                    tableList.Add(new string[TxtCol] { txtData[0], txtData[1].ToLower(), txtData[2] });
+                    txtData[0] = "";
+                    txtData[1] = "";
+                    txtData[2] = "";
+                }
+                i++;
+                Next:
+                nextLine = sr.ReadLine();
+            }
+            return tableList;
+        }
+        public static string GenerateSqlScript(List<string[]> txtDataSource)
+        {
+            string sqlstmt = string.Empty;
+            string Default_text = "";
+            int i = 0;
+            foreach (string[] txtScript in txtDataSource)
+            {
+                if (txtScript[0] == string.Empty && txtScript[1] == string.Empty)
+                {
+                    continue;
+                }
+                //Table name
+                if (txtScript[0] != string.Empty && txtScript[1] == string.Empty)
+                {
+                    if (i != 0)
+                    {
+                        sqlstmt = sqlstmt.Substring(0, sqlstmt.LastIndexOf(","));
+                        sqlstmt = sqlstmt + string.Format(");\r\n");
+                    }
+                    sqlstmt = sqlstmt + string.Format("\r\ndrop table if exists  `" + txtScript[0] + "` ;\r\n");
+                    sqlstmt = sqlstmt + string.Format("create table `" + txtScript[0] + "` \r\n");
+                    sqlstmt = sqlstmt + string.Format("    (\r\n");
+                    txtScript[0] = "";
+                    continue;
+                }
+                // 加默认值
+                if (txtScript[1].ToLower().Contains("verchar") || txtScript[1].ToLower().Contains("char"))
+                {
+                    Default_text = "  DEFAULT NULL COMMENT ' '";
+                }
+                else if (txtScript[1].ToLower().Contains("decimal"))
+                {
+                    Default_text = "  NOT NULL COMMENT ' '";
+                }
+                else if (txtScript[1].ToLower().Contains("datetime"))
+                {
+                    Default_text = "  NOT NULL default now()";
+                }
+                else if (txtScript[1].ToLower().Contains("no."))
+                {
+                    txtScript[1] = "int";
+                    Default_text = "   NOT NULL PRIMARY KEY";
+                }
+                //else
+                //{
+                //    Default_text = " ";
+                //}
+                sqlstmt = sqlstmt + string.Format("    `" + txtScript[0] + "` " + txtScript[1] + Default_text + ",\r\n");
+                i++;
+            }
+            sqlstmt = sqlstmt.TrimEnd(',') + string.Format(");\r\n");
+            return sqlstmt;
+        }
+        public static void WriteToTxt(string sqlstmt, string filePath)
+        {
+            // 如果文件不存在，创建文件； 如果存在，覆盖文件 
+            StreamWriter tableDefinition = new StreamWriter(filePath);
+            tableDefinition.Write(sqlstmt);
+            tableDefinition.Close();
+        }
+    }
+}
