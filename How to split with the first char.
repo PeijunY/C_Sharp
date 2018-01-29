@@ -1,0 +1,59 @@
+http://bbs.csdn.net/topics/391985950
+
+请教各位一个问题一个字符串有多个相同的分隔符，如何将第一个分隔符替换成其它的分隔符？
+如string str="abc,def,ghk,123";将第一个逗号替换成"#"变为
+str="abc#def,ghk,123";
+
+var sp = str.Split(new char[] { ',', '，' }, 2);
+
+string str = "abc,def,ghk,123";
+str = string.Join("#", str.Split(new[] { ',' }, 2));
+Debug.WriteLine(str);
+
+using System;
+using System.Diagnostics;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = "abc,def,ghk,123";
+            var sw = new Stopwatch();
+            TimeSpan r1, r2;
+            r2 = test2(str, sw);
+            sw.Reset();
+            r1 = test1(str, sw);
+            Console.WriteLine("replace用时{0}", r1.TotalMilliseconds);
+            Console.WriteLine("split用时{0}", r2.TotalMilliseconds);
+            Console.WriteLine("......................请按任意键结束");
+            Console.ReadKey();
+        }
+
+        private static TimeSpan test1(string str, Stopwatch sw)
+        {
+            sw.Start();
+            for (var i = 0; i < 1000; i++)
+            {
+                var sb = new StringBuilder(str);
+                var rr = sb.Replace(",", "#", str.IndexOf(","), 1).ToString();
+            }
+            sw.Stop();
+            return sw.Elapsed;
+        }
+
+        private static TimeSpan test2(string str, Stopwatch sw)
+        {
+            sw.Start();
+            for (var i = 0; i < 1000; i++)
+            {
+                var sp = str.Split(new char[] { ',', '，' }, 2);
+                var rr = sp[0] + "#" + sp[1];
+            }
+            sw.Stop();
+            return sw.Elapsed;
+        }
+    }
+}
